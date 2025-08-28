@@ -18,9 +18,16 @@ html, body {
 #game {
 	width: var(--screen-width);
 	height: var(--screen-height);
-	background: lightgray;
 	position: relative;
 	user-select: none;
+}
+
+#in-game {
+	position: absolute;
+	background: lightgray;
+	width: 100%;
+	height: 100%;
+	display: none;
 }
 
 .item {
@@ -33,14 +40,14 @@ html, body {
 
 #kitchen {
 	background-color: white;
-	border-color: red;
+	border-color: darkorange;
 	top: calc(var(--screen-height) / 2 - var(--icon-size) / 2);
 	left: calc(var(--screen-width) / 2 - var(--icon-size) / 2);
 }
 
 #mic {
 	background-color: white;
-	border-color: green;
+	border-color: darkgreen;
 	bottom: calc(var(--screen-height) / 4 - var(--icon-size) / 2);
 	left: calc(var(--screen-width) / 6 - var(--icon-size) / 2);
 }
@@ -54,6 +61,108 @@ html, body {
 
 #user {
 	background-color: white;
+	border-color: gray;
 	top: calc(var(--screen-height) / 2 - var(--icon-size) / 2);
 	right: calc(var(--screen-width) / 6 - var(--icon-size) / 2);
+}
+
+#score {
+	font-family: monospace;
+	font-size: 50px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#remaining-time {
+	font-family: monospace;
+	font-size: 50px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+#bowl .bowl, #mic .mic, #user .user {
+	width: 100%;
+	height: 100%;
+}
+
+#kitchen.has-bowl .bowl {
+	display: block;
+}
+
+#kitchen .bowl {
+	display: none;
+	position: absolute;
+	--size: 66%;
+	left: calc(50% - var(--size) / 2);
+	width: var(--size);
+	height: var(--size);
+}
+
+#kitchen.has-mic .mic {
+	display: block;
+}
+
+#kitchen .mic {
+	display: none;
+	position: absolute;
+	--size: 66%;
+	transform: rotate(-45deg);
+	top: 25%;
+	left: calc(50% - var(--size) / 2);
+	width: var(--size);
+	height: var(--size);
+}
+
+.mic {
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("./resources/music_microphone_wireless.png");
+}
+
+.bowl {
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("./resources/food_gyudon.png");
+}
+
+.user {
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("./resources/kuchi_mawari_kitanai_boy.png");
+}
+
+#title {
+	position: absolute;
+	background-color: darkgreen;
+	width: 100%;
+	height: 100%;
+}
+
+#title {
+	position: absolute;
+	background-color: darkgreen;
+	width: 100%;
+	height: 100%;
+	font-size: 200%;
+	color: white;
+	display: block;
+}
+
+#result {
+	position: absolute;
+	background-color: darkred;
+	width: 100%;
+	height: 100%;
+	font-size: 200%;
+	color: white;
+	display: none;
+}
+
+button {
+	font-size: 100%;
 }

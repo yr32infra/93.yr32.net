@@ -4,6 +4,17 @@
 		<meta charset=UTF-8>
 		<title>ぐーさんの！牛丼マイクタイムアタック！</title>
 		<link rel=stylesheet href=./style.css>
+		<meta property=og:type content=website>
+		<meta property=og:title content=ぐーさんの！牛丼マイクタイムアタック！>
+		<meta property=og:description content=牛丼とマイクを組み合わせ、牛丼マイク弁当を作ろう！>
+		<meta property=og:site_name content=ぐーさんの！牛丼マイクタイムアタック！>
+		<meta property=og:image content=https://93.yr32.net/resources/ogp.png>
+		<meta name=twitter:card content=summary_large_image>
+		<meta name=twitter:site content=@yanorei32>
+		<meta name=twitter:creator content=@yanorei32>
+		<meta name=keywords content="ぐーさん 牛丼マイク弁当 タイムアタック 牛丼マイク弁当友の会">
+		<meta name=description content=牛丼とマイクを組み合わせ、牛丼マイク弁当を作ろう！>
+		<meta name=viewport content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<div class=container>
@@ -11,12 +22,42 @@
 			<p>これはファン作品です。</p>
 			<div id=game>
 				<div id=in-game>
-					<div draggable=true class=item id=bowl></div>
-					<div draggable=true class=item id=mic></div>
-					<div draggable=true class=item id=kitchen></div>
-					<div class=item id=user></div>
+					<div draggable=true class=item id=bowl>
+						<div class=bowl></div>
+					</div>
+					<div draggable=true class=item id=mic>
+						<div class=mic></div>
+					</div>
+					<div draggable=true class=item id=kitchen>
+						<div class=mic></div>
+						<div class=bowl></div>
+					</div>
+					<div class=item id=user>
+						<div class=user></div>
+					</div>
+					<span id=score>SCORE <span class=score-indicator>0000</span></span>
+					<span id=remaining-time>あと 30.0 秒</span>
+				</div>
+				<div id=title>
+					<center>
+						<h1>ぐーさんの！牛丼マイクタイムアタック</h1>
+						<p>「牛丼」と「マイク」を「キッチン」へドラッグ！</p>
+						<p>おいしい「牛丼マイク弁当」を作ろう！</p>
+						<p>男の子に「牛丼マイク弁当」を全力で食べさせ、ハイスコアを狙おう！</p>
+						<button id=start-button>スタート！</button>
+					</center>
+				</div>
+				<div id=result>
+					<center>
+						<h1>ぐーさんの！牛丼マイクタイムアタック</h1>
+						<h2>スコア: <span class=score-indicator>0000</span></h2>
+						<button id=tweet-button>ツイート</button>
+						<button id=title-button>タイトルへ</button>
+					</center>
 				</div>
 			</div>
+			<hr>
+			<center>2025 &copy; yanorei32</center>
 		</div>
 		<script src=main.js></script>
 	</body>
