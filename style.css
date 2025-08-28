@@ -1,0 +1,59 @@
+:root {
+	--icon-size: 240px;
+	--screen-width: 1200px;
+	--screen-height: 720px;
+}
+
+html, body {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+.container {
+	width: var(--screen-width);
+	margin: auto;
+}
+
+#game {
+	width: var(--screen-width);
+	height: var(--screen-height);
+	background: lightgray;
+	position: relative;
+	user-select: none;
+}
+
+.item {
+	border-radius: 10%;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	position: absolute;
+	border: 10px solid;
+}
+
+#kitchen {
+	background-color: white;
+	border-color: red;
+	top: calc(var(--screen-height) / 2 - var(--icon-size) / 2);
+	left: calc(var(--screen-width) / 2 - var(--icon-size) / 2);
+}
+
+#mic {
+	background-color: white;
+	border-color: green;
+	bottom: calc(var(--screen-height) / 4 - var(--icon-size) / 2);
+	left: calc(var(--screen-width) / 6 - var(--icon-size) / 2);
+}
+
+#bowl {
+	background-color: white;
+	border-color: darkgreen;
+	top: calc(var(--screen-height) / 4 - var(--icon-size) / 2);
+	left: calc(var(--screen-width) / 6 - var(--icon-size) / 2);
+}
+
+#user {
+	background-color: white;
+	top: calc(var(--screen-height) / 2 - var(--icon-size) / 2);
+	right: calc(var(--screen-width) / 6 - var(--icon-size) / 2);
+}
